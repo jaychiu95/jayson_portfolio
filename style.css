@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  width: 90%;
+  height: 8vh;
+  margin: auto;
+  align-items: center;
+}
+
+nav {
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #485054;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.nav-link:hover {
+  color: black;
+  font-size: 15px;
+}
+
+.burger {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  cursor: pointer;
+  display: none;
+}
+.burger_img {
+  width: 30px;
+}
+
+#intro-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 92vh;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/background.jpg");
+  color: whitesmoke;
+}
+
+.intro-name,
+.intro-title {
+  margin-bottom: 5%;
+}
+
+.intro-name {
+  font-size: 44px;
+}
+
+.intro-title {
+  font-size: 20px;
+}
+
+.view-btn {
+  border: 2px solid whitesmoke;
+  background: transparent;
+  color: whitesmoke;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.down-arrow {
+  font-size: 40px;
+  animation: move 1s infinite alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+#about-section,
+#projects-section,
+#contact-section {
+  text-align: center;
+}
+
+#about-section {
+  min-height: 80vh;
+  margin-top: 30px;
+}
+
+#projects-section {
+  min-height: 100vh;
+  background: #eadede;
+}
+
+.project-title {
+  margin-top: 30px;
+}
+
+#contact-section {
+  min-height: 50vh;
+  line-height: 120px;
+}
+
+.aboutme {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 110px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.profilepicimg {
+  margin-bottom: 30px;
+  width: 30%;
+  height: auto;
+  border-radius: 60px;
+  border: 3px #373d47 solid;
+}
+
+.profiletitle {
+  margin-bottom: 30px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summarytext {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.icons {
+  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 50px;
+}
+
+.fa-linkedin {
+  color: #0074b2;
+}
+
+.fa-github-square {
+  color: black;
+}
+
+.fa-html5 {
+  color: #e44d26;
+}
+
+.fa-css3-alt {
+  color: #3596d0;
+}
+
+.fa-sass {
+  color: #c66395;
+}
+
+.fa-js {
+  color: #f8c427;
+}
+
+.fa-react {
+  color: #5ed4f4;
+}
+
+.projects {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: 30px auto;
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 50px;
+  width: 60%;
+  margin: 0.3rem auto;
+  text-decoration: none;
+  background: #02171f;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.projects img {
+  width: 90%;
+  border: 3px #373d47 solid;
+  border-radius: 50px;
+}
+
+.projects img:hover {
+  opacity: 0.5;
+  transition: 1s;
+  border: 3px #373d473a solid;
+}
+
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer {
+  min-height: 10vh;
+  background: #373d47;
+  text-align: center;
+  color: white;
+  margin: auto;
+  line-height: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin: 30px auto;
+  }
+  .aboutme {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projects {
+    grid-template-columns: 1fr;
+    width: 70%;
+    margin: 30px auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .firstname {
+    font-size: 24px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: 35vh;
+  left: 0px;
+  top: 8vh;
+  background-color: #aec6cf;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 376px) {
+  .firstname {
+    font-size: 16px;
+  }
+  .intro-name {
+    font-size: 32px;
+  }
+  .intro-title {
+    font-size: 16px;
+  }
+
+  .summaryicons {
+    margin-top: 30px;
+  }
+
+  .contactinfo {
+    font-size: 12px;
+  }
+  #footer {
+    font-size: 10px;
+  }
+}
